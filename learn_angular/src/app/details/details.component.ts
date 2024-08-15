@@ -43,6 +43,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
         <label for="email">Email</label>
         <input id="email" type="email" formControlName="email" />
+        
         <button type="submit" class="primary">Apply now</button>
       </form>
     </section>
