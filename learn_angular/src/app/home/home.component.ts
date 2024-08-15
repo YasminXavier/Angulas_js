@@ -38,6 +38,8 @@ import { HousingService } from '../housing.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
+
   housingLocationList: Housinglocation[] = [];
   housingService: HousingService = inject(HousingService);
   filteredLocationList: Housinglocation[] = [];
@@ -57,8 +59,10 @@ export class HomeComponent {
     property. */
   }
   constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
-    this.filteredLocationList = this.housingLocationList;
+    this.housingService.getAllHousingLocations().then((housingLocationList: Housinglocation[]) => {
+      this.housingLocationList = housingLocationList;
+      this.filteredLocationList = housingLocationList;
+    });
   }
   /* The constructor is the first function that runs when this 
   component is created. The code in the constructor will assign 

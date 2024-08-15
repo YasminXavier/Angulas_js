@@ -43,7 +43,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
         <label for="email">Email</label>
         <input id="email" type="email" formControlName="email" />
-        
+
         <button type="submit" class="primary">Apply now</button>
       </form>
     </section>
@@ -52,6 +52,8 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent {
+  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
+
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService = inject(HousingService);
   housinglocation: Housinglocation | undefined;
@@ -73,8 +75,10 @@ http://localhost:4200/details/0 */
   });
 
   constructor() {
-    const housingLocationId = Number(this.route.snapshot.params['id']);
-    this.housinglocation = this.housingService.getHousingLocationById(housingLocationId);
+    const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
+    this.housingService.getHousingLocationById(housingLocationId).then((housingLocation) => {
+      this.housinglocation = housingLocation;
+    });
     /* Now the component has the code to display the correct information based on the selected 
     housing location. The constructor now includes a call to the HousingService to pass the 
     route parameter as an argument to the getHousingLocationById service function.*/
@@ -86,11 +90,11 @@ http://localhost:4200/details/0 */
       this.applyForm.value.lastName ?? '',
       this.applyForm.value.email ?? '',
     );
-      /* The template now includes an event handler 
-      (submit)="submitApplication()". Angular uses parentheses syntax around 
-      the event name to define events in the template code. The code on the 
-      right hand side of the equals sign is the code that should be executed 
-      when this event is triggered*/
+    /* The template now includes an event handler 
+    (submit)="submitApplication()". Angular uses parentheses syntax around 
+    the event name to define events in the template code. The code on the 
+    right hand side of the equals sign is the code that should be executed 
+    when this event is triggered*/
   }
 
 }

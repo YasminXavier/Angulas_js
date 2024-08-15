@@ -45,6 +45,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     código CSS que será aplicado ao template do componente. */
 })
 export class HousingLocationComponent {
+  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
+
   @Input() housinglocation!: Housinglocation; 
   /* You have to add the ! because the input is expecting the value 
   to be passed. In this case, there is no default value. 
