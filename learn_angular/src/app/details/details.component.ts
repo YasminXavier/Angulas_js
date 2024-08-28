@@ -52,7 +52,6 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent {
-  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
 
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService = inject(HousingService);

@@ -4,6 +4,9 @@ import { Housinglocation } from '../housinglocation';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingService } from '../housing.service';
 
+
+
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -38,13 +41,17 @@ import { HousingService } from '../housing.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
+  //readonly baseUrl = 'https://images.pexels.com/photos';
+
+  
 
   housingLocationList: Housinglocation[] = [];
   housingService: HousingService = inject(HousingService);
   filteredLocationList: Housinglocation[] = [];
   /* The filteredLocationList hold the values that match the 
   search criteria entered by the user.*/
+
+  
 
   filterResults(text: string) {
     if (!text) {

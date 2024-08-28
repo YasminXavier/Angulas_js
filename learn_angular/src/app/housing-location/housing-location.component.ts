@@ -26,7 +26,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
         class="listing-photo"
         [src]="housinglocation.photo"
         alt="Exterior photo of {{ housinglocation.name }}"
-        crossorigin
       />
       <h2 class="listing-heading"> {{ housinglocation.name }} </h2>
       <p class="listing-location"> {{ housinglocation.city }}, {{ housinglocation.state }} </p>
@@ -45,7 +44,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     código CSS que será aplicado ao template do componente. */
 })
 export class HousingLocationComponent {
-  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
+  baseUrl = 'https://images.pexels.com/photos';
 
   @Input() housinglocation!: Housinglocation; 
   /* You have to add the ! because the input is expecting the value 
