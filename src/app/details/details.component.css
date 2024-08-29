@@ -1,62 +1,88 @@
+article {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div{
+  display: flex;
+  gap: 50px;
+}
+
 .listing-photo {
-    height: 600px;
-    width: 50%;
-    object-fit: cover;
-    border-radius: 30px;
-    float: right;
+  height: 400px;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 20px;
+  float: right;
+}
+
+.listing-heading {
+  font-size: 48pt;
+  font-weight: bold;
+}
+
+.listing-location::before {
+  content: url('/assets/pin.png') / '';
+}
+
+.listing-location {
+  font-size: 24pt;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.listing-features>.section-heading {
+  color: var(--secondary-color);
+  font-size: 24pt;
+}
+
+.listing-features {
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.listing-features li {
+  font-size: 14pt;
+  margin: 8px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.listing-apply{
+  padding-left: 20px;
+  width: 50%;
+  align-items: end;
+  border-left: solid 1px var(--secondary-color);
+}
+
+.listing-apply .section-heading {
+  font-size: 18pt;
+  margin-bottom: 15px;
+}
+
+input {
+  display: block;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+label {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+
+
+
+@media (max-width: 1024px) {
+  .listing-photo {
+    width: 100%;
+    height: 400px;
   }
-  .listing-heading {
-    font-size: 48pt;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  .listing-location::before {
-    content: url('/assets/location-pin.svg') / '';
-  }
-  .listing-location {
-    font-size: 24pt;
-    margin-bottom: 15px;
-  }
-  .listing-features > .section-heading {
-    color: var(--secondary-color);
-    font-size: 24pt;
-    margin-bottom: 15px;
-  }
-  .listing-features {
-    margin-bottom: 20px;
-  }
-  .listing-features li {
-    font-size: 14pt;
-  }
-  li {
-    list-style-type: none;
-  }
-  .listing-apply .section-heading {
-    font-size: 18pt;
-    margin-bottom: 15px;
-  }
-  label, input {
-    display: block;
-  }
-  label {
-    color: var(--secondary-color);
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 12pt;
-  }
-  input {
-    font-size: 16pt;
-    margin-bottom: 15px;
-    padding: 10px;
-    width: 400px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: solid .3px;
-  }
-  @media (max-width: 1024px) {
-    .listing-photo {
-      width: 100%;
-      height: 400px;
-    }
-  }
+}

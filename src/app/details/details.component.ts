@@ -18,35 +18,36 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
       crossorigin
     />
     <section class="listing-description">
-      <h2 class="listing-heading">{{ housinglocation?.name }}</h2>
+      <h3 class="listing-heading">{{ housinglocation?.name }}</h3>
       <p class="listing-location">{{ housinglocation?.city }}, {{ housinglocation?.state }}</p>
     </section>
+    <div>
+      <section class="listing-features">
+        <h4 class="section-heading">About this housing location</h4>
+        <ul>
+          <li>• Units available: {{ housinglocation?.availableUnits }}</li>
+          <li>• Does this location have wifi: {{ housinglocation?.wifi }}</li>
+          <li>• Does this location have laundry: {{ housinglocation?.laundry }}</li>
+        </ul>
+      </section>
 
-    <section class="listing-features">
-      <h2 class="section-heading">About this housing location</h2>
-      <ul>
-        <li>Units available: {{ housinglocation?.availableUnits }}</li>
-        <li>Does this location have wifi: {{ housinglocation?.wifi }}</li>
-        <li>Does this location have laundry: {{ housinglocation?.laundry }}</li>
-      </ul>
-    </section>
+      <section class="listing-apply">
+        <h2 class="section-heading">Apply now to live here:</h2>
+        <form [formGroup]="applyForm" (submit)="submitApplication()">
 
-    <section class="listing-apply">
-      <h2 class="section-heading">Apply now to live here</h2>
-      <form [formGroup]="applyForm" (submit)="submitApplication()">
+          <label for="first-name">First Name</label>
+          <input id="first-name" type="text" formControlName="firstName" />
 
-        <label for="first-name">First Name</label>
-        <input id="first-name" type="text" formControlName="firstName" />
+          <label for="last-name">Last Name</label>
+          <input id="last-name" type="text" formControlName="lastName" />
 
-        <label for="last-name">Last Name</label>
-        <input id="last-name" type="text" formControlName="lastName" />
+          <label for="email">Email</label>
+          <input id="email" type="email" formControlName="email" />
 
-        <label for="email">Email</label>
-        <input id="email" type="email" formControlName="email" />
-
-        <button type="submit" class="primary">Apply now</button>
-      </form>
-    </section>
+          <button type="submit" class="primary">Apply now</button>
+        </form>
+      </section>
+    </div>
   </article>
 `,
   styleUrls: ['./details.component.css'],

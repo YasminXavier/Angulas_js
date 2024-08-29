@@ -7,8 +7,8 @@
             "state": "IL",
             "photo": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
             "availableUnits": 4,
-            "wifi": true,
-            "laundry": true
+            "wifi": "yes",
+            "laundry": "yes"
         },
         {
             "id": 1,
@@ -17,8 +17,8 @@
             "state": "CA",
             "photo": "assets/house1.jpeg",
             "availableUnits": 0,
-            "wifi": false,
-            "laundry": true
+            "wifi": "no",
+            "laundry": "yes"
         },
         {
             "id": 2,
@@ -27,8 +27,8 @@
             "state": "AK",
             "photo": "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
             "availableUnits": 1,
-            "wifi": false,
-            "laundry": false
+            "wifi": "no",
+            "laundry": "no"
         },
         {
             "id": 3,
@@ -37,8 +37,8 @@
             "state": "IL",
             "photo": "https://images.pexels.com/photos/277667/pexels-photo-277667.jpeg",
             "availableUnits": 1,
-            "wifi": true,
-            "laundry": false
+            "wifi": "yes",
+            "laundry": "no"
         },
         {
             "id": 4,
@@ -47,8 +47,8 @@
             "state": "IN",
             "photo": "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg",
             "availableUnits": 1,
-            "wifi": true,
-            "laundry": false
+            "wifi": "yes",
+            "laundry": "no"
         },
         {
             "id": 5,
@@ -57,8 +57,8 @@
             "state": "CA",
             "photo": "https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg",
             "availableUnits": 2,
-            "wifi": true,
-            "laundry": true
+            "wifi": "yes",
+            "laundry": "yes"
         },
         {
             "id": 6,
@@ -67,8 +67,8 @@
             "state": "CA",
             "photo": "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg",
             "availableUnits": 5,
-            "wifi": true,
-            "laundry": true
+            "wifi": "yes",
+            "laundry": "yes"
         },
         {
             "id": 7,
@@ -77,8 +77,8 @@
             "state": "CA",
             "photo": "https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg",
             "availableUnits": 2,
-            "wifi": true,
-            "laundry": true
+            "wifi": "yes",
+            "laundry": "yes"
         },
         {
             "id": 8,
@@ -87,8 +87,8 @@
             "state": "CA",
             "photo": "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg",
             "availableUnits": 10,
-            "wifi": false,
-            "laundry": false
+            "wifi": "no",
+            "laundry": "no"
         },
         {
             "id": 9,
@@ -97,8 +97,8 @@
             "state": "OR",
             "photo": "https://images.pexels.com/photos/1449729/pexels-photo-1449729.jpeg",
             "availableUnits": 6,
-            "wifi": true,
-            "laundry": true
+            "wifi": "yes",
+            "laundry": "yes"
         }
     ]
 }
