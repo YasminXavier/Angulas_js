@@ -44,7 +44,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     código CSS que será aplicado ao template do componente. */
 })
 export class HousingLocationComponent {
-  baseUrl = 'https://images.pexels.com/photos';
 
   @Input() housinglocation!: Housinglocation; 
   /* You have to add the ! because the input is expecting the value 

@@ -12,12 +12,6 @@ import { HousingService } from '../housing.service';
   standalone: true,
   imports: [CommonModule, HousingLocationComponent],
   template: `
-    <section>
-      <form>
-        <input type="text" placeholder="Filter by city" #filter/>
-        <button class="primary" type="button" (click)="filterResults(filter.value)"> Search</button>
-      </form>
-    </section>
     <section class="results">
       <app-housing-location
         *ngFor="let housinglocation of filteredLocationList"
@@ -41,7 +35,6 @@ import { HousingService } from '../housing.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  //readonly baseUrl = 'https://images.pexels.com/photos';
 
   
 
@@ -53,18 +46,7 @@ export class HomeComponent {
 
   
 
-  filterResults(text: string) {
-    if (!text) {
-      this.filteredLocationList = this.housingLocationList;
-      return;
-    }
-    this.filteredLocationList = this.housingLocationList.filter((housingLocation) =>
-      housingLocation?.city.toLowerCase().includes(text.toLowerCase()),
-    );
-    /* This function uses the String filter function to compare the 
-    value of the text parameter against the housingLocation.city 
-    property. */
-  }
+
   constructor() {
     this.housingService.getAllHousingLocations().then((housingLocationList: Housinglocation[]) => {
       this.housingLocationList = housingLocationList;
