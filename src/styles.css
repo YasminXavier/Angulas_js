@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
+  text-decoration: none;
 }
 
 
@@ -31,7 +32,6 @@ button.primary {
 }
 
 input{
-  outline: none !important;
   /* top left bottom right */
   padding: 10px 10px 5px 10px;
   border-top: none;
@@ -41,4 +41,5 @@ input{
   display: inline-block;
   width: 30%;
   height: fit-content;
+  text-decoration: none;
 }
