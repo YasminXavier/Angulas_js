@@ -7,6 +7,13 @@
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
 }
+
+
+p{
+  font-size: small;
+}
+a{font-size: small;}
+
 :root {
   --primary-color: #605DC8;
   --secondary-color: #8B89E6;

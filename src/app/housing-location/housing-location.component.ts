@@ -27,7 +27,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
         [src]="housinglocation.photo"
         alt="Exterior photo of {{ housinglocation.name }}"
       />
-      <h2 class="listing-heading"> {{ housinglocation.name }} </h2>
+      <h4 class="listing-heading"> {{ housinglocation.name }} </h4>
       <p class="listing-location"> {{ housinglocation.city }}, {{ housinglocation.state }} </p>
       <a [routerLink]="['/details', housinglocation.id]">Learn More</a>
     </section>
